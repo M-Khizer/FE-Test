@@ -2,9 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  // Set base for GitHub Pages. Replace YOUR_REPO with the repository name if deploying to repo pages.
-  // For user/organization pages (username.github.io), set base: '/' instead.
-  base: '/FE-Test/',
-})
+  // Use GH Pages base only for production builds to avoid localhost redirects
+  base: command === 'build' ? '/FE-Test/' : '/',
+}))
