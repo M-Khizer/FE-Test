@@ -1,5 +1,5 @@
 import logo from '../assets/Group 1907.png'
-import avatar from '../assets/62d2428bcb73207b8b2bb07f3ab9c3d4131e734f.jpg'
+import avatar from '../assets/f7b7cb33145f7000c3fac5cc4d409f31a3de3686.jpg'
 
 export default function Header() {
 	return (
